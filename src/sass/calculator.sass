@@ -1,0 +1,60 @@
+$buttonSize: 80px
+
+div, input
+  box-sizing: border-box
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  font-family: Arial
+
+input
+  outline: none
+
+.calculator
+  width: 320px
+  .input_wrapper
+    width: 100%
+    background-color: #aaa
+    input
+      padding: 0 10px
+      line-height: $buttonSize
+      height: $buttonSize
+      width: 100%
+      font-size: 26px
+      font-weight: bold
+      color: #888
+      border: none
+      border-bottom: 1px solid #ccc
+      background-color: #eee
+  .buttons
+    display: flex
+    background: #eee
+    .column
+      flex-direction: column
+      display: flex
+      flex-basis: 80px
+      .button
+        background-color: #d6d6d6
+        cursor: pointer
+        color: #666
+        height: $buttonSize
+        text-align: center
+        font-size: 26px
+        line-height: $buttonSize
+        flex: 0 $buttonSize
+        border-bottom: 1px solid #aaa
+        border-right: 1px solid #aaa
+        &:last-child
+          border-bottom: none
+        &:hover
+          background-color: #d0d0d0
+    .column:last-child
+      .button
+        border-right: none
+        &:last-child
+          flex-grow: 1
+          display: flex
+          justify-content: center
+          flex-direction: column
+          text-align: center
